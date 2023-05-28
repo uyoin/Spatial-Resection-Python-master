@@ -29,6 +29,17 @@ pip install numpy
 ```python
 python space_resection.py
 ```
-
+你可以在代码中修改GNSS, INS, P, G, f, iteration和threshold参数来达到你的需求。
+```python
+if __name__ == '__main__':
+    GNSS = [1009.923, 1038.056, 649.6]  # GNSS测出的坐标
+    INS = [0.0, 0.0, 102.83]  # INS测出的姿态角
+    P = {...  # 像点坐标
+    G = {...  # 地面控制点坐标
+    f = 50  # 相机焦距
+    iteration = 100  # 迭代次数
+    threshold = 1e-5  # 收敛阈值
+    mian(GNSS, INS, P, G, f, iteration, threshold)
+```
 如果你有任何问题，建议或者反馈，欢迎通过 "Issues" 功能与作者联系。
 如果你觉得这个项目对你有帮助，欢迎 "Star" 支持作者！
